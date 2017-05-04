@@ -21,6 +21,15 @@
     android:key="top_level_settings">
 
     <com.android.settings.widget.HomepagePreference
+        android:fragment="org.paranoid.paranoidsettings.Paranoid"
+        android:icon="@drawable/ic_dashboard_something"
+        android:key="top_level_paranoid_settings"
+        android:order="-155"
+        android:title="@string/paranoid_settings_title"
+        android:summary="@string/paranoid_settings_summary"
+        settings:controller="org.paranoid.paranoidsettings.TopLevelParanoidPreferenceController" />
+
+    <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.network.NetworkDashboardFragment"
         android:icon="@drawable/ic_settings_wireless"
         android:key="top_level_network"
