@@ -64,4 +64,7 @@
     <string name="lockscreen_secure_title">Secure power menu and quick settings</string>
     <string name="lockscreen_secure_summary">Power menu and quick settings requires unlock</string>
 
+    <!-- Radio Info -->
+    <string name="radio_info_title">Radio-Info</string>
+
 </resources>
