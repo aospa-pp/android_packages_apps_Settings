@@ -26,6 +26,10 @@
     <string name="private_dns_mode_cloudflare" translatable="false">Cloudflare DNS</string>
     <string name="private_dns_hostname_cloudflare" translatable="false">one.one.one.one</string>
 
+    <!-- AdGuard DNS Option -->
+    <string name="private_dns_mode_adguard" translatable="false">AdGuard DNS</string>
+    <string name="private_dns_hostname_adguard" translatable="false">dns.adguard.com</string>
+
     <!-- DC Dimming -->
     <string name="dc_dimming_title">DC Dimming</string>
     <string name="dc_dimming_info">Reduces eye strain in low light conditions by minimizing screen flicker. May result in reduced image quality and poor color production, or higher power consumption.</string>
