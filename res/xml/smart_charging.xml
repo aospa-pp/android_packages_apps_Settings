@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:key="smart_charging_screen"
+    android:title="@string/smart_charging_title">
+
+    <com.android.settingslib.widget.TopIntroPreference
+        android:key="battery_smart_charging_intro_text"
+        android:title="@string/smart_charging_footer"/>
+
+    <co.aospa.framework.preference.SecureSettingMainSwitchPreference
+        android:key="smart_charging"
+        android:title="@string/smart_charging_switch_title"
+        android:defaultValue="false" />
+
+    <co.aospa.framework.preference.CustomSecureSeekBarPreference
+        android:key="smart_charging_level"
+        android:title="@string/smart_charging_level_title"
+        android:max="100"
+        settings:min="65"
+        settings:units="%"
+        android:defaultValue="80"
+        android:dependency="smart_charging" />
+</PreferenceScreen>
