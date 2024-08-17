@@ -30,6 +30,14 @@
     <string name="private_dns_mode_adguard" translatable="false">AdGuard DNS</string>
     <string name="private_dns_hostname_adguard" translatable="false">dns.adguard.com</string>
 
+    <!-- Smart charging -->
+    <string name="smart_charging_title">Smart charging</string>
+    <string name="smart_charging_summary">Set maximum charging level</string>
+    <string name="smart_charging_switch_title">Use smart charging</string>
+    <string name="smart_charging_level_title">Stop trigger level</string>
+    <string name="smart_charging_resume_level_title">Start trigger level</string>
+    <string name="smart_charging_footer">Smart Charging allows you to set maximum charging level to extend the lifespan of your battery</string>
+
     <!-- DC Dimming -->
     <string name="dc_dimming_title">DC Dimming</string>
     <string name="dc_dimming_info">Reduces eye strain in low light conditions by minimizing screen flicker. May result in reduced image quality and poor color production, or higher power consumption.</string>

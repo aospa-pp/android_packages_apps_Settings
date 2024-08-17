@@ -20,6 +20,7 @@ import static com.android.settings.fuelgauge.BatteryBroadcastReceiver.BatteryUpd
 
 import android.app.settings.SettingsEnums;
 import android.content.Context;
+import android.content.res.Resources;
 import android.database.ContentObserver;
 import android.net.Uri;
 import android.os.Bundle;
@@ -34,6 +35,7 @@ import androidx.preference.Preference;
 import com.android.settings.R;
 import com.android.settings.SettingsActivity;
 import com.android.settings.Utils;
+import com.android.settings.fuelgauge.BatteryBroadcastReceiver.BatteryUpdateType;
 import com.android.settings.fuelgauge.BatteryHeaderPreferenceController;
 import com.android.settings.fuelgauge.BatteryInfo;
 import com.android.settings.fuelgauge.BatteryInfoLoader;
@@ -62,6 +64,8 @@ public class PowerUsageSummary extends PowerUsageBase implements
     static final String KEY_BATTERY_ERROR = "battery_help_message";
     @VisibleForTesting
     static final String KEY_BATTERY_USAGE = "battery_usage_summary";
+
+    static final String SMART_CHARGING = "smart_charging_key";
 
     @VisibleForTesting
     PowerUsageFeatureProvider mPowerFeatureProvider;
@@ -168,6 +172,12 @@ public class PowerUsageSummary extends PowerUsageBase implements
         }
         mBatteryTipPreferenceController.restoreInstanceState(icicle);
         updateBatteryTipFlag(icicle);
+
+        // Check availability of Smart Charging
+        Preference mSmartCharging = (Preference) findPreference(SMART_CHARGING);
+        if (!getResources().getBoolean(com.android.internal.R.bool.config_smartChargingAvailable)) {
+            getPreferenceScreen().removePreference(mSmartCharging);
+        }
     }
 
     @Override
@@ -287,5 +297,18 @@ public class PowerUsageSummary extends PowerUsageBase implements
     }
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider(R.xml.power_usage_summary);
+    new BaseSearchIndexProvider(R.xml.power_usage_summary) {
+        @Override
+        public List<String> getNonIndexableKeys(Context context) {
+            List<String> keys = super.getNonIndexableKeys(context);
+            final Resources res = context.getResources();
+
+            boolean mSmartChargingSupported = res.getBoolean(
+                    com.android.internal.R.bool.config_smartChargingAvailable);
+            if (!mSmartChargingSupported)
+                keys.add(SMART_CHARGING);
+
+            return keys;
+        }
+    };
 }
