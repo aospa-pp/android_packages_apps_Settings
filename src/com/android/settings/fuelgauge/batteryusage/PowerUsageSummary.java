@@ -25,12 +25,14 @@ import android.database.ContentObserver;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.SystemProperties;
 import android.provider.Settings.Global;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.loader.app.LoaderManager;
 import androidx.loader.content.Loader;
 import androidx.preference.Preference;
+import androidx.preference.SwitchPreference;
 
 import com.android.settings.R;
 import com.android.settings.SettingsActivity;
@@ -163,6 +165,14 @@ public class PowerUsageSummary extends PowerUsageBase
         if (!getResources().getBoolean(com.android.internal.R.bool.config_smartChargingAvailable)) {
             getPreferenceScreen().removePreference(mSmartCharging);
         }
+
+        SwitchPreference qti_boost_framework = findPreference("qti_boost_framework");
+        qti_boost_framework.setChecked(SystemProperties.getBoolean("persist.qti.boost_framework.enabled", true));
+        qti_boost_framework.setOnPreferenceChangeListener((preference, newValue) -> {
+            boolean isEnabled = (Boolean) newValue;
+            SystemProperties.set("persist.qti.boost_framework.enabled", isEnabled ? "true" : "false");
+            return true;
+        });
     }
 
     @Override
