@@ -75,4 +75,10 @@
         android:title="@string/battery_footer_summary"
         android:selectable="false"
         settings:searchable="false" />
+
+    <co.aospa.framework.preference.SecureSettingSwitchPreference
+        android:key="qti_boost_framework"
+        android:title="@string/qti_boost_framework_title"
+        android:summary="@string/qti_boost_framework_summary"
+        android:defaultValue="true" />
 </PreferenceScreen>

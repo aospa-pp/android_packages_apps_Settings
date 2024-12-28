@@ -48,4 +48,8 @@
     <string name="status_bar_battery_percentage_text_inside">Inside the icon</string>
     <string name="status_bar_battery_percentage_text_next">Next to the icon</string>
 
+    <!-- QTI BoostFramework -->
+    <string name="qti_boost_framework_title" translatable="false">QTI boost framework</string>
+    <string name="qti_boost_framework_summary">Apply CPU and GPU boost on UI tasks to reduce jank. Reboot is needed</string>
+
 </resources>
