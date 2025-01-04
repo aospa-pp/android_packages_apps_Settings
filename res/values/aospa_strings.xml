@@ -52,4 +52,8 @@
     <string name="qti_boost_framework_title" translatable="false">QTI boost framework</string>
     <string name="qti_boost_framework_summary">Apply CPU and GPU boost on UI tasks to reduce jank. Reboot is needed</string>
 
+    <!-- Media art -->
+    <string name="media_art_title">Media cover art</string>
+    <string name="media_art_summary">Display media cover art when available</string>
+
 </resources>
