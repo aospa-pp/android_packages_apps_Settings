@@ -41,6 +41,14 @@
         settings:searchable="false"
         settings:controller="com.android.settings.gestures.DoubleTwistPreferenceController" />
 
+    <co.aospa.framework.preference.SystemSettingSwitchPreference
+        android:key="three_finger_gesture"
+        android:title="@string/three_finger_gesture"
+        android:summary="@string/three_finger_gesture_summary"
+        android:defaultValue="true"
+        settings:keywords="@string/keywords_gesture"
+        settings:controller="com.android.settings.gestures.SwipeToScreenshotPreferenceController" />
+
     <Preference
         android:key="gesture_system_navigation_input_summary"
         android:title="@string/system_navigation_title"
