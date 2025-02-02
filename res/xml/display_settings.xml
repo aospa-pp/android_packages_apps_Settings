@@ -105,6 +105,12 @@
             android:key="pocket_judge"
             android:title="@string/proximity_wake_title"
             android:summary="@string/proximity_wake_summary" />
+
+        <co.aospa.framework.preference.SecureSettingSwitchPreference
+            android:key="lockscreen_secure"
+            android:title="@string/lockscreen_secure_title"
+            android:summary="@string/lockscreen_secure_summary"
+            android:defaultValue="false" />
     </PreferenceCategory>
 
     <PreferenceCategory
