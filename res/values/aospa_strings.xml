@@ -60,4 +60,8 @@
     <string name="three_finger_gesture">Swipe to screenshot</string>
     <string name="three_finger_gesture_summary">Swipe down with three fingers to take a screenshot</string>
 
+    <!-- Authentication for lock screen power menu and quick settings -->
+    <string name="lockscreen_secure_title">Secure power menu and quick settings</string>
+    <string name="lockscreen_secure_summary">Power menu and quick settings requires unlock</string>
+
 </resources>
