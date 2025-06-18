@@ -96,8 +96,4 @@
     <string name="pif_data_title">Select pif.json to spoof</string>
     <string name="pif_data_summary">For props spoofing of gms process</string>
 
-    <!-- Keybox Data -->
-    <string name="keybox_data_title">Select keybox.xml to spoof</string>
-    <string name="keybox_data_summary">For key attestation of all apps system wide</string>
-
 </resources>
