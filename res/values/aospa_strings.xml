@@ -92,8 +92,4 @@
     <string name="menu_show_overlay">Show overlay</string>
     <string name="menu_hide_overlay">Hide overlay</string>
 
-    <!-- Pif Data -->
-    <string name="pif_data_title">Select pif.json to spoof</string>
-    <string name="pif_data_summary">For props spoofing of gms process</string>
-
 </resources>
