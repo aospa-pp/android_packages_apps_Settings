@@ -87,6 +87,12 @@
             android:fragment="com.android.settings.display.ScreenTimeoutSettings"
             settings:controller="com.android.settings.display.ScreenTimeoutPreferenceController"/>
 
+        <co.aospa.framework.preference.SystemSettingSwitchPreference
+            android:key="ls_media_art_enabled"
+            android:title="@string/media_art_title"
+            android:summary="@string/media_art_summary"
+            android:defaultValue="false" />
+
         <SwitchPreferenceCompat
             android:key="pocket_judge"
             android:title="@string/proximity_wake_title"
