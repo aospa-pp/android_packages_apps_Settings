@@ -52,7 +52,7 @@ class ExternalFontInstaller(private val context: Context) {
             runCatching {
                 val binder = ServiceManager.getService("statusbar")
                 val statusBarService = IStatusBarService.Stub.asInterface(binder)
-                statusBarService.reboot(false, "system_font_change")
+                statusBarService.reboot(false)
             }.onFailure {
                 Log.e(TAG, "Failed to reboot device via statusbar service", it)
             }
