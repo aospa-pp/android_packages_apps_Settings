@@ -126,6 +126,12 @@
             android:summary="@string/icon_manager_summary">
             <intent android:action="com.android.settings.action.STATUS_BAR_TUNER" />
         </Preference>
+
+        <SwitchPreferenceCompat
+            android:key="axion_qs_enabled"
+            android:title="@string/axion_qs_title"
+            android:summary="@string/axion_qs_summary"
+            settings:controller="com.android.settings.display.AxionQsPreferenceController" />
     </PreferenceCategory>
 
     <PreferenceCategory

@@ -18,4 +18,8 @@
     <string name="three_finger_gesture">Swipe to screenshot</string>
     <string name="three_finger_gesture_summary">Swipe down with three fingers to take a screenshot</string>
 
+    <!-- Quick Settings -->
+    <string name="axion_qs_title">Axion Quick Settings</string>
+    <string name="axion_qs_summary">Use the Axion Quick Settings layout instead of the stock one. SystemUI restarts automatically to apply the change.</string>
+
 </resources>
