@@ -68,6 +68,7 @@ abstract class BaseTextReadingScreen(val isUiOnly: Boolean) : PreferenceScreenMi
         preferenceHierarchy(context) {
             val fontSizePreference = FontSizePreference(context, entryPoint, isUiOnly)
             val displaySizePreference = DisplaySizePreference(context, entryPoint, isUiOnly)
+            val densityPreference = DensityPreference(isUiOnly)
             +TextReadingPreview(
                 displaySizeProvider = { displaySizePreference.displaySizePreview },
                 fontSizeProvider = { fontSizePreference.fontSizePreview },
@@ -81,6 +82,7 @@ abstract class BaseTextReadingScreen(val isUiOnly: Boolean) : PreferenceScreenMi
                 {
                     +fontSizePreference
                     +displaySizePreference
+                    +densityPreference
                 }
             +PreferenceCategory(
                 key = "text_style",
